@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<title>Capstone To-Do App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do App</h1>
+        <div class="input-area">
+            <input type="text" id="taskInput" placeholder="Enter new task....">
+            <button id="addBtn">Add</button>
+        </div>
+        <div class="tools">
+            <input type="text" id="search" placeholder="search task">
+            <select id="sort">
+                <option value="new">Newest First</option>
+                <option value="old">Oldest First</option>
+            </select>
+        </div>
+        <div class="filter-buttons">
+            <button class="active" data-filter="all">All</button>
+            <button data-filter="pending">Pending</button>
+            <button data-filter="completed">Completed</button>
+        </div>
+        <div class="stats">
+            <div class="stat">
+                <h2 id="total">0</h2>
+                <p>Total</p>
+            </div>
+            <div class="stat">
+                <h2 id="completed">0</h2>
+                <p>Completed</p>
+            </div>
+            <div class="stat">
+                <h2 id="pending">0</h2>
+                <p>Pending</p>
+            </div>
+        </div>
+        <div id="taskList"></div>
+        <p class="empty" id="emptyMessage">
+            No Tasks Added
+        </p>
+        <div class="progress-box">
+            <h3 style="color: white; margin-bottom: 10px;">
+                Progress
+            </h3>
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <button id="clearCompleted">Clear Completed</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
